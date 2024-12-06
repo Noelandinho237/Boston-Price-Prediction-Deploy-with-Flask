@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ML Model Deployment</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light grey background */
+        }
+
+        .container {
+            max-width: 500px; /* Limit form width */
+            margin-top: 50px; /* Center vertically */
+        }
+
+        h1 {
+            text-align: center; /* Center title */
+        }
+
+        form {
+            background-color: #ffffff; /* White form background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        input[type="submit"] {
+            background-color: #28a745; /* Green background */
+            color: #ffffff; /* White text */
+            border: none;
+            padding: 10px 20px; /* Medium button size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        input[type="decimal"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da; /* Grey border */
+            border-radius: 5px;
+            transition: border-color 0.3s; /* Smooth border transition */
+        }
+
+        input[type="decimal"]:hover,
+        input[type="decimal"]:focus {
+            border-color: #707070; /* Darker border on hover/focus */
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="container" class="container text-center mt-5">
+        <h1>Enter the house specifications</h1>
+
+        <form action="/predict" method="post">
+
+            <label for="feature1"> PTRATIO </label>
+            <input type="decimal" id="feature1" name="PTRATIO">
+
+            <label for="feature2">LSTAT</label>
+            <input type="decimal" id="feature2" name="LSTAT">
+
+            <label for="feature3">RM</label>
+            <input type="decimal" id="feature3" name="RM">
+
+            <label for="feature4">RAD</label>
+            <input type="decimal" id="feature4" name="RAD">
+
+            <label for="feature5">CRIM:</label>
+            <input type="decimal" id="feature5" name="CRIM">
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+
+
+</html>
